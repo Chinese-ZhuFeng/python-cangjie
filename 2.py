@@ -3,11 +3,6 @@ class f:
     def __init__(self):
         self.import_statements = []
         self.main_code = []
-        self.var_map = {
-            "N": "a",
-            "n": "b",
-            "pi": "c"
-        }
         self.rules = [
             (r"^import (\w+)$", self._capture_import),
             (r"^([A-Z_]+) = \d+$", self._wrap_main_declaration),
